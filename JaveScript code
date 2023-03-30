@@ -1,0 +1,23 @@
+function sortEmotions(arr, order){
+  let emotions = arr;
+  let sorted = [];
+  let answer = [];
+  for (let i = 0; i < emotions.length; i++) {
+    if (emotions[i] == ":D") {sorted.push(5)}
+    if (emotions[i] == ":)") {sorted.push(4)}
+    if (emotions[i] == ":|") {sorted.push(3)}
+    if (emotions[i] == ":(" ) {sorted.push(2)}
+    if (emotions[i] == "T_T") {sorted.push(1)}
+  }
+  sorted.sort()
+  for (let j = 0; j < sorted.length; j++) {
+    if (sorted[j] == 5) { answer.push(":D") }
+    if (sorted[j] == 4) { answer.push(":)") }
+    if (sorted[j] == 3) { answer.push(":|") }
+    if (sorted[j] == 2) { answer.push(":(") }
+    if (sorted[j] == 1) { answer.push("T_T") }
+  }
+  
+  if (order) {return answer.reverse()}
+  else {return answer}
+}
